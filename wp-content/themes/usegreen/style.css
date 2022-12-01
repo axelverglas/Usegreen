@@ -1,0 +1,626 @@
+/*
+Theme Name: UseGreen
+Theme URI: https://www.usegreen.fr
+Author: Axel Verglas.
+Author URI: https://www.usegreen.fr
+Description: Themes for usegreen
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600&display=swap");
+/*==================== VARIABLES CSS ====================*/
+:root
+{
+	--header-height: 6rem;
+	/*========== Colors ==========*/
+	--first-color: #AAE59A;
+	--first-color-alt: #72C65C;
+	--secondary-color: #E5FFCB;
+	--text-color: #F3F3E4;
+	--body-color: #1D1B1B;
+	/*========== Font and typography ==========*/
+	--body-font: 'Darker Grotesque', sans-serif;
+	--h1-font-size: 2.8rem;
+	--h2-font-size: 1.25rem;
+	--normal-font-size: 1.25rem;
+	/*========== Font weight ==========*/
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	/*========== Margenes ==========*/
+	--m-0-25: .25rem;
+	--m-0-5: .5rem;
+	--m-0-75: .75rem;
+	--m-1: 1rem;
+	--m-1-5: 1.5rem;
+	--m-2: 2rem;
+	--m-2-5: 2.5rem;
+	--m-3: 3rem;
+	/*========== z index ==========*/
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+}
+
+@media screen and (min-width: 968px)
+{
+	:root
+	{
+		--h1-font-size: 3.125rem;
+		--h2-font-size: 1.875rem;
+		--normal-font-size: 1.25rem;
+	}
+}
+
+/*==================== BASE ====================*/
+*
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+
+html, body{
+    height: 100%;
+}
+
+body
+{
+	margin: 0 0 var(--header-height) 0;
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	background-color: var(--body-color);
+	color: var(--text-color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h1, h2, h3, h4
+{
+	color: var(--text-color);
+	font-weight: var(--font-semi-bold);
+}
+
+ul
+{
+	list-style: none;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+    padding: 2rem 0 2rem;
+  }
+  
+.section__title {
+    font-size: var(--h1-font-size);
+    color: var(--text-color);
+    text-align: left;
+	margin-bottom: 1rem;
+}
+  
+/*==================== LAYOUT ====================*/
+.container{
+    max-width: 1140px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+.grid {
+    display: grid;
+}
+  
+.header {
+    width: 100%;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+	border-bottom: 2px solid var(--text-color);
+  }
+
+/*==================== NAV ====================*/
+.nav {
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+
+.nav__logo img {
+	width: 125px;
+}
+
+.nav__button{
+	padding: 3px 20px 8px 20px;
+	background-color: var(--first-color);
+	border-radius: 20px;
+}
+
+.nav__button a{
+	color: var(--body-color);
+}
+
+.nav__button:hover{
+	background-color: var(--first-color-alt);
+}
+
+/*==================== HOME ====================*/
+
+.home__section{
+	padding: 5rem 0 4rem;
+}
+
+.home__content{
+  	align-items: center;
+}
+
+.home__title {
+    font-size: var(--h1-font-size);
+    color: var(--text-color);
+    text-align: left;
+}
+
+.home__description{
+	padding-bottom: 3em;
+}
+
+.home__description p{
+	font-size: var(--normal-font-size);
+	padding-right: 1.25rem;
+	margin-bottom: var(--m-2);
+}
+
+.home__button{
+	font-size: 21px;
+	display: flex;
+	color: var(--text-color);
+}
+
+.home__button span{
+	background-color: var(--first-color);
+	padding: 14px 18px 14px 18px;
+	border-radius: 20px;
+	margin-right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.home__img{
+	width: 330px;
+	justify-self: center;
+}
+
+/*==================== DEFINITIONS ====================*/
+
+.definition__box{
+	background: linear-gradient(to right, #AAE59A 5%, #F3F3E4 30%);
+	padding: 25px;
+}
+
+.definition__title{
+	font-size: var(--h2-font-size);
+	text-align: left;
+	color: var(--body-color);
+	margin-bottom: var(--m-0-5);
+}
+
+.definition__description{
+	text-align: left;
+	color: var(--body-color);
+	font-size: var(--normal-font-size);
+}
+
+/*==================== NUMBER ====================*/
+
+.number__container{
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5rem;
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+}
+
+.number__card{
+	background-color: var(--secondary-color);
+	padding: 0px 30px 30px 30px;
+	clip-path: polygon(0 0%, 0 0, 90% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10% 
+  )
+}
+
+.number__title{
+	font-size: var(--h1-font-size);
+	text-align: left;
+	color: var(--body-color);
+	margin-bottom: var(--m-0-5);
+}
+
+.number__divider{
+	border: 1px dashed var(--body-color);
+}
+
+.number__description{
+	margin-top: var(--m-0-75);
+	color: var(--body-color);
+}
+
+/*==================== ADVICES ====================*/
+
+.advices__content{
+	order: 2;
+}
+
+.advices__card{
+	background-color: #2F2F2F;
+	padding: 20px 20px 20px 20px;
+	margin-bottom: var(--m-1-5);
+	cursor: pointer;
+}
+
+.advices__card.active{
+	background-color: var(--secondary-color);
+	cursor: default;
+}
+
+.advices__title{
+	font-size: var(--normal-font-size);
+}
+
+
+.advices__description{
+	display: none;
+}
+
+.advices__card.active .advices__description{
+	display: block;
+	color: var(--body-color);
+	margin-top: var(--m-0-75);
+}
+
+.advices__card.active .advices__title{
+	color: var(--body-color);
+}
+
+.advices__img{
+	margin-top: var(--m-2);
+	margin-bottom: var(--m-2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	order: 1;
+}
+
+/*==================== NEWS ====================*/
+.news .container{
+	max-width: 840px;
+}
+.news__container{
+	display:flex;
+	justify-content: space-between;
+}
+
+.news__container .section__title{
+	width: 60%;
+}
+
+.news__container a{
+	align-self: center;
+	text-decoration: underline;
+	font-size: var(--normal-font-size);
+	font-weight: var(--font-semi-bold);
+	color: var(--text-color);
+}
+
+.news__searchbar{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: var(--m-1);
+	margin-bottom: var(--m-1);
+}
+
+.news__searchbar svg{
+	position: absolute;
+	left: 15px;
+}
+
+.news__searchbar input{
+	background-color: #1D1B1B;
+	width: 100%;
+	height: 50px;
+	border: 2px dashed var(--text-color);
+	border-radius: 12px;
+	padding-left: 50px;
+	color: #F3F3E4;
+	outline: none;
+}
+
+.news__card{
+	margin-bottom: 20px;
+}
+
+.news__img{
+	width: 100%;
+}
+
+.news__category{
+	display:flex;
+}
+
+.news__tag{
+	color: var(--text-color);
+	margin-right: var(--m-1);
+}
+
+.news_date{
+	cursor: default;
+}
+
+.news__title{
+	font-size: var(--normal-font-size);
+	font-weight: var(--font-medium);
+	text-decoration: underline;
+	color: var(--text-color);
+}
+
+/*==================== NEWSLETTER ====================*/
+
+.newsletter__box{
+	background: linear-gradient(to right, #AAE59A 5%, #F3F3E4 30%);
+	padding: 25px;
+}
+
+.newsletter__title{
+	font-size: var(--h1-font-size);
+	text-align: left;
+	color: var(--body-color);
+	margin-bottom: var(--m-0-5);
+}
+
+.newsletter__description{
+	text-align: left;
+	color: var(--body-color);
+	font-size: var(--normal-font-size);
+}
+
+.newsletter__searchbar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: var(--m-1);
+	position: relative;
+}
+
+.newsletter__searchbar input{
+	outline: none;
+	background-color: transparent;
+	width: 100%;
+	height: 50px;
+	border: 2px dashed #5BA670;
+	border-radius: 12px;
+	padding-left: 20px;
+	color: var(--body-color);
+}
+
+.newsletter__button{
+	position: absolute;
+	right: 10px;
+	background-color: var(--first-color);
+	border: none;
+	border-radius: 20px;
+	padding: 10px 20px 10px 20px;
+}
+
+/*==================== CONTACT ====================*/
+
+.contact__input input, textarea{
+	background-color: #2F2F2F !important;
+	margin-top: var(--m-0-5) !important;
+	padding: 10px !important;
+	border: 0 !important;
+	color: var(--text-color) !important;
+}
+
+.contact__input textarea{
+	resize: none !important;
+}
+
+.contact__form .wpforms-submit{
+	font-family: 'darker grotesque', sans-serif;
+	padding: 3px 20px 8px 20px !important;
+	background-color: var(--first-color) !important;
+	border-radius: 20px !important;
+	border: 0 !important;
+	outline: none !important;
+}
+
+.contact__form .wpforms-submit:hover{
+	background-color: var(--first-color-alt);
+}
+
+.contact__form .wpforms-error{
+	margin-top: var(--m-0-75) !important;
+	font-size: var(--normal-font-size) !important;
+}
+
+.contact__form .wpforms-confirmation-container-full{
+	border-radius: 25px !important;
+}
+.contact__form .wpforms-confirmation-container-full p{
+	padding-left: 10px !important;
+}
+
+/*==================== 404 ====================*/
+
+.error__title{
+	font-size: 12rem;
+	margin:0;
+}
+
+.error__description{
+	font-size: var(--h1-font-size);
+}
+
+.error__content{
+	justify-self: center;
+}
+
+/*==================== FOOTER ====================*/
+
+.footer{
+	border-top: 2px solid var(--text-color);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.footer__content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__social{
+	display: flex;
+}
+
+.footer__social li{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.footer__scrolltotop{
+	color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+	.home__content{
+		grid-template-columns: 1fr 1fr;
+		padding-top: 2.5rem;
+	}
+
+	.home__description p{
+		font-size: var(--normal-font-size);
+	}
+
+	.home__img{
+		width: 100%;
+		display: flex;
+		justify-content: end;
+	}
+
+	.definition__box{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.definition__title{
+		font-size: 45px;
+		text-align: center;
+	}
+
+	.definition__description{
+		text-align: center;
+		font-size: 24px;
+		padding-left: 170px;
+		padding-right: 170px;
+	}
+
+	.advices__container{
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		display: grid;
+	}
+
+	.advices__content{
+		order: 1;
+	}
+
+	.advices__cards.active .advices__ellipse{
+		width: 90px;
+	}
+
+	.advices__img{
+		margin-bottom: 0;
+		order: 2;
+	}
+
+	.news__container .section__title{
+		width: 90%;
+	}
+
+	.news__searchbar{
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+
+	.news__searchbar svg{
+		left: 310px;
+	}	
+
+	.news__card{
+		display: flex;
+	}
+
+	.news__img{
+		width: 260px;
+	}
+
+	.news__title{
+		font-size: 1.875rem;
+	}
+
+	.news__content{
+		margin-left: 20px;
+	}
+
+	.news__searchbar input{
+		width: 500px;
+	}
+
+	.newsletter__box{
+		padding-bottom: 40px;
+	}
+
+	.newsletter__title{
+		font-size: 2.8rem;
+		text-align: center;
+	}
+
+	.newsletter__description{
+		padding-left: 200px;
+		padding-right: 200px;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+	
+	.newsletter__searchbar input{
+		width: 650px;
+	}
+
+	.newsletter__button{
+		right: 205px;
+	}
+
+	.error__container{
+		grid-template-columns: 1fr 1fr;
+		padding-top: 2.5rem;
+	}
+}
