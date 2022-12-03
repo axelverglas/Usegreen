@@ -60,6 +60,7 @@ Version: 1.0
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	-webkit-box-sizing: border-box;
 }
 
 html
@@ -157,6 +158,7 @@ img
 
 .nav__button a{
 	color: var(--body-color);
+	font-weight: var(--font-medium);
 }
 
 .nav__button:hover{
@@ -231,12 +233,16 @@ img
 }
 
 /*==================== NUMBER ====================*/
+.carousel-items{
+	display: flex;
+	overflow-x: scroll;
+	gap: 1rem;
+}
 
-.number__container{
-	grid-template-columns: repeat(3, 1fr);
-	gap: 5rem;
-	overflow-x: auto;
-	overscroll-behavior-inline: contain;
+.carousel-item{
+	flex-grow: 1;
+    flex-shrink: 0;
+	flex: 1 0 250px;
 }
 
 .number__card{
@@ -382,6 +388,10 @@ img
 	color: var(--text-color);
 }
 
+.news__nopost{
+	text-align: center;
+}
+
 /*==================== NEWSLETTER ====================*/
 
 .newsletter__box{
@@ -410,24 +420,33 @@ img
 	position: relative;
 }
 
-.newsletter__searchbar input{
-	outline: none;
-	background-color: transparent;
-	width: 100%;
-	height: 50px;
-	border: 2px dashed #5BA670;
-	border-radius: 12px;
-	padding-left: 20px;
-	color: var(--body-color);
+.newsletter__searchbar .wpforms-field-label{
+	display: none !important;
 }
 
-.newsletter__button{
+.newsletter__searchbar input{
+	outline: none !important;
+	background-color: transparent !important;
+	width: 100% !important;
+	height: 50px !important;
+	border: 2px dashed #5BA670 !important;
+	border-radius: 12px !important;
+	padding-left: 20px !important;
+	color: var(--body-color) !important;
+}
+
+#wpforms-128 .wpforms-submit-container .wpforms-submit{
 	position: absolute;
-	right: 10px;
-	background-color: var(--first-color);
-	border: none;
-	border-radius: 20px;
-	padding: 10px 20px 10px 20px;
+	right: 8px !important;
+	bottom: 28px !important;
+	background-color: var(--first-color) !important;
+	border: none !important;
+	border-radius: 20px !important;
+	padding: 3px 20px 8px 20px !important;
+}
+
+#wpforms-128-field_1-error{
+	position:absolute;
 }
 
 /*==================== CONTACT ====================*/
@@ -487,33 +506,55 @@ img
 /*==================== FOOTER ====================*/
 
 .footer{
+	margin-top: var(--m-2);
 	border-top: 2px solid var(--text-color);
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-.footer__content{
-	display: flex;
-	justify-content: space-between;
+.footer__copyright{
+	text-align: center;
+	margin-top: var(--m-1);
+	margin-bottom: var(--m-1);
+}
+
+.footer__container{
+	margin-top: var(--m-2-5);
+	margin-bottom: var(--m-2-5);
+}
+
+.footer ul{
+	margin-bottom: var(--m-1);
+}
+
+.footer__title{
+	font-size: var(--normal-font-size);
+	color: var(--first-color);
+	margin-bottom: var(--m-0-5);
+}
+
+.footer__link{
+	color: var(--text-color);
+}
+
+.footer__link:hover{
+	color: var(--first-color);
 }
 
 .footer__social{
 	display: flex;
+	margin-top: var(--m-0-75);
 }
 
 .footer__social li{
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-right: var(--m-0-75);
 }
 
-.footer__scrolltotop{
-	color: var(--text-color);
-}
+/*==================== RESPONSIVE ====================*/
 
 @media screen and (min-width: 768px) {
 	.home__content{
 		grid-template-columns: 1fr 1fr;
-		padding-top: 2.5rem;
 	}
 
 	.home__description p{
@@ -543,6 +584,9 @@ img
 		padding-right: 170px;
 	}
 
+	.carousel-items{
+		gap: 5rem;
+	}
 	.advices__container{
 		grid-template-columns: 1fr 1fr;
 		gap: 1.5rem;
@@ -596,7 +640,7 @@ img
 	}
 
 	.newsletter__box{
-		padding-bottom: 40px;
+		padding-bottom: var(--m-0-5);
 	}
 
 	.newsletter__title{
@@ -619,8 +663,23 @@ img
 		right: 205px;
 	}
 
+	#wpforms-128 .wpforms-submit-container .wpforms-submit{
+		right: 215px !important;
+	}
+
 	.error__container{
 		grid-template-columns: 1fr 1fr;
 		padding-top: 2.5rem;
+	}
+
+	.footer__container{
+		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		justify-content: center;
+		gap: 9rem;
+	}
+
+	.footer ul{
+		margin-bottom: 0;
 	}
 }
