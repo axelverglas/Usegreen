@@ -108,7 +108,7 @@ img
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-    padding: 2rem 0 2rem;
+    padding: 3rem 0 3rem;
   }
   
 .section__title {
@@ -136,7 +136,18 @@ img
     z-index: var(--z-fixed);
     background-color: var(--body-color);
 	border-bottom: 2px solid var(--text-color);
-  }
+}
+
+.button{
+	padding: 3px 20px 8px 20px;
+	background-color: var(--first-color);
+	border-radius: 20px;
+	color: var(--body-color);
+}
+
+.button:hover{
+	background-color: var(--first-color-alt);
+}
 
 /*==================== NAV ====================*/
 .nav {
@@ -150,20 +161,11 @@ img
 	width: 125px;
 }
 
-.nav__button{
-	padding: 3px 20px 8px 20px;
-	background-color: var(--first-color);
-	border-radius: 20px;
-}
-
 .nav__button a{
 	color: var(--body-color);
 	font-weight: var(--font-medium);
 }
 
-.nav__button:hover{
-	background-color: var(--first-color-alt);
-}
 
 /*==================== HOME ====================*/
 
@@ -246,6 +248,7 @@ img
 }
 
 .number__card{
+	height: 282px;
 	background-color: var(--secondary-color);
 	padding: 0px 30px 30px 30px;
 	clip-path: polygon(0 0%, 0 0, 90% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10% 
@@ -303,6 +306,7 @@ img
 
 .advices__card.active .advices__title{
 	color: var(--body-color);
+	text-decoration: underline;
 }
 
 .advices__img{
@@ -400,7 +404,6 @@ img
 }
 
 .newsletter__title{
-	font-size: var(--h1-font-size);
 	text-align: left;
 	color: var(--body-color);
 	margin-bottom: var(--m-0-5);
@@ -429,7 +432,7 @@ img
 	background-color: transparent !important;
 	width: 100% !important;
 	height: 50px !important;
-	border: 2px dashed #5BA670 !important;
+	border: 2px dashed #2F2F2F!important;
 	border-radius: 12px !important;
 	padding-left: 20px !important;
 	color: var(--body-color) !important;
@@ -649,9 +652,6 @@ img
 	}
 
 	.newsletter__description{
-		padding-left: 200px;
-		padding-right: 200px;
-		font-size: 1.5rem;
 		text-align: center;
 	}
 	

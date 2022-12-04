@@ -38,7 +38,7 @@ add_filter( 'wp_check_filetype_and_ext', 'capitaine_file_types', 10, 4 );
 
 // Autoriser l'import des fichiers SVG et WEBP
 function capitaine_mime_types( $mimes ){
-    $mimes['svg'] = 'image/svg+xml';
+    $mimes['svg'] = 'image/svg';
     $mimes['webp'] = 'image/webp';
     return $mimes;
 }
@@ -52,9 +52,26 @@ function capitaine_file_types( $types, $file, $filename, $mimes ) {
 	return $types;
 }
 
+// Header
 function header_function() {
     register_nav_menu('header',__( 'Main navigation' ));
 }
 add_action( 'init', 'header_function' );
 
-add_image_size( 'test', 650, 650, true);
+// Pages d'options
+if( function_exists( 'acf_add_options_page' ) ) {
+	
+	acf_add_options_page( array(
+		'page_title' 	=> 'Chiffres',
+		'menu_slug' 	=> 'number',
+		'redirect'		=> false,
+        'position'    	=> 2
+	) );
+
+    acf_add_options_page( array(
+		'page_title' 	=> 'Conseils',
+		'menu_slug' 	=> 'advices',
+		'redirect'		=> false,
+        'position'    	=> 2
+	) );
+}
