@@ -13,12 +13,6 @@ function usegreen_register_assets() {
         );
     }
 
-    // chargement font-awesome
-    wp_enqueue_style(
-        'load-fa',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
-    );
-
     // Déclarer le fichier style.css à la racine du thème
     wp_enqueue_style( 
         'usegreen',
@@ -63,6 +57,20 @@ function header_function() {
     register_nav_menu('header',__( 'Main navigation' ));
 }
 add_action( 'init', 'header_function' );
+
+require_once('widgets/social.php');
+
+add_action('widgets_init', function () {
+    register_widget(Usegreen_Social_Widget::class);
+    register_sidebar([
+        'id' => 'footer',
+        'name' => __('Footer', 'Usegreen'),
+        'before_title' => '<div class="footer__title">',
+        'after_title' => '</div>',
+        'before_widget' => '<div class="footer__col">',
+        'after_widget' => '</div>'
+    ]);
+});
 
 // Pages d'options
 if( function_exists( 'acf_add_options_page' ) ) {

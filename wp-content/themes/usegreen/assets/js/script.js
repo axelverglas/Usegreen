@@ -14,3 +14,20 @@ for (let i = 0; i < advicesCards.length; i++) {
     this.classList.add("active");
   });
 }
+
+let scrollToTop = document.querySelector(".scroll-to-top");
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 100) {
+    scrollToTop.classList.add("active");
+  } else {
+    scrollToTop.classList.remove("active");
+  }
+});
+
+scrollToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
