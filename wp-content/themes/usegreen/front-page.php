@@ -39,14 +39,12 @@
         <section class="section">
                 <div class="container">
                     <h2 class="section__title">Quelques chiffres</h2>
-                        <ul class="carousel-items">
+                        <ul class="number__container grid">
                             <?php while(have_rows('number_list', 'option')): the_row() ?>
-                            <li class="carousel-item">
-                                <div class="number__card">
+                            <li class="number__card">
                                     <h2 class="number__title"><?php the_sub_field('number', 'option')?></h2>
                                     <div class="number__divider"></div>
                                     <p class="number__description"><?php the_sub_field('description', 'option')?></p>
-                                </div>
                             </li>
                             <?php endwhile; ?>
                         </ul>
@@ -64,13 +62,11 @@
                         <ul>
                         <?php while(have_rows('advices_list', 'option')): the_row() ?>
                             <li class="advices__card">
-                                <div class="advices__ellipse">
-                                    <div class="ellipse"></div>
-                                </div>
-                                <div>
-                                    <h3 class="advices__title"><?php the_sub_field('title', 'option')?></h3>
+                                    <div class="advices__head">
+                                        <h3 class="advices__title"><?php the_sub_field('title', 'option')?>
+                                        </h3>
+                                    </div>
                                     <p class="advices__description"><?php the_sub_field('description', 'option')?></p>
-                                </div>
                             </li>
                         <?php endwhile; ?>
                         </ul>

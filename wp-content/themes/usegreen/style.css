@@ -38,10 +38,6 @@ Version: 1.0
 	--m-2: 2rem;
 	--m-2-5: 2.5rem;
 	--m-3: 3rem;
-	/*========== z index ==========*/
-	--z-tooltip: 10;
-	--z-fixed: 100;
-	--z-modal: 1000;
 }
 
 @media screen and (min-width: 968px)
@@ -108,8 +104,8 @@ img
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-    padding: 3rem 0 3rem;
-  }
+    padding: 2rem 0 2rem;
+}
   
 .section__title {
     font-size: var(--h1-font-size);
@@ -170,7 +166,7 @@ img
 /*==================== HOME ====================*/
 
 .home__section{
-	padding: 5rem 0 4rem;
+	padding: 3rem 0 3rem;
 }
 
 .home__content{
@@ -235,24 +231,16 @@ img
 }
 
 /*==================== NUMBER ====================*/
-.carousel-items{
-	display: flex;
-	overflow-x: scroll;
-	gap: 1rem;
-}
-
-.carousel-item{
-	flex-grow: 1;
-    flex-shrink: 0;
-	flex: 1 0 250px;
-}
-
 .number__card{
-	height: 282px;
+	margin-bottom: var(--m-1);
 	background-color: var(--secondary-color);
 	padding: 0px 30px 30px 30px;
 	clip-path: polygon(0 0%, 0 0, 90% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10% 
   )
+}
+
+.number__card:last-child{
+	margin-bottom: 0px;
 }
 
 .number__title{
@@ -293,6 +281,15 @@ img
 	font-size: var(--normal-font-size);
 }
 
+.advices__head{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.advices__head .active{
+	display:block;
+}
 
 .advices__description{
 	display: none;
@@ -556,6 +553,12 @@ img
 /*==================== RESPONSIVE ====================*/
 
 @media screen and (min-width: 768px) {
+	.section {
+		padding: 3rem 0 3rem;
+	}
+	.home__section{
+		padding: 5rem 0 5.5rem;
+	}
 	.home__content{
 		grid-template-columns: 1fr 1fr;
 	}
@@ -587,9 +590,13 @@ img
 		padding-right: 170px;
 	}
 
-	.carousel-items{
+	.number__container{
+		grid-template-columns: repeat(3, 1fr);
 		gap: 5rem;
+		overflow-x: auto;
+		overscroll-behavior-inline: contain;
 	}
+
 	.advices__container{
 		grid-template-columns: 1fr 1fr;
 		gap: 1.5rem;

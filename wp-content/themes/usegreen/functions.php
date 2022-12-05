@@ -13,6 +13,12 @@ function usegreen_register_assets() {
         );
     }
 
+    // chargement font-awesome
+    wp_enqueue_style(
+        'load-fa',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
+    );
+
     // Déclarer le fichier style.css à la racine du thème
     wp_enqueue_style( 
         'usegreen',
