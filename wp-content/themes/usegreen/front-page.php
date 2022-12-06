@@ -105,7 +105,7 @@
     <section class="section">
         <div class="container">
             <div class="news__container">
-                <h2 class="section__title">L'actualités des pros du digital</h2>
+                <h2 class="section__title">L'actualité des pros du digital</h2>
                 <a href="/blog/">TOUT VOIR</a>
             </div>
             <?php get_search_form(); ?>

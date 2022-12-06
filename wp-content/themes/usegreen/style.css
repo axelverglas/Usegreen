@@ -457,18 +457,26 @@ img {
 	color: var(--body-color) !important;
 }
 
+#wpforms-128 {
+	position: relative !important;
+}
+
+#wpforms-128 .wpforms-submit-container {
+	position: absolute !important;
+	right: 6px !important;
+	bottom: 18px !important;
+}
+
 #wpforms-128 .wpforms-submit-container .wpforms-submit {
-	position: absolute;
-	right: 8px !important;
-	bottom: 45px !important;
 	background-color: var(--first-color) !important;
 	border: none !important;
 	border-radius: 20px !important;
 	padding: 3px 20px 8px 20px !important;
+	margin-left: 50px !important;
 }
 
 #wpforms-128-field_1-error {
-	margin-top: var(--m-0-5);
+	position: absolute !important
 }
 
 /*==================== CONTACT ====================*/
@@ -664,8 +672,6 @@ textarea {
 	.number__container {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 5rem;
-		overflow-x: auto;
-		overscroll-behavior-inline: contain;
 	}
 
 	.advices__container {
@@ -716,14 +722,6 @@ textarea {
 		margin-left: 20px;
 	}
 
-	.news__searchbar input {
-		width: 500px;
-	}
-
-	.newsletter__box {
-		padding-bottom: var(--m-0-5);
-	}
-
 	.newsletter__title {
 		font-size: 2.8rem;
 		text-align: center;
@@ -733,21 +731,19 @@ textarea {
 		text-align: center;
 	}
 
-	.newsletter__searchbar input {
-		width: 650px;
-	}
-
-	.newsletter__button {
-		right: 205px;
-	}
-
 	.newsletter__searchbar {
 		width: 1060px !important;
 		margin-left: 205px !important;
 	}
 
 	#wpforms-128 .wpforms-submit-container .wpforms-submit {
-		right: 215px !important;
+		margin-left: 200px !important;
+	}
+
+	#wpforms-128 .wpforms-submit-container {
+		position: absolute !important;
+		right: 208px !important;
+		bottom: 18px !important;
 	}
 
 	.error__container {
