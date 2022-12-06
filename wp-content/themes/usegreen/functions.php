@@ -20,6 +20,14 @@ function usegreen_register_assets() {
         array(), 
         '1.0'
     );
+
+    // add font-awesome
+    wp_enqueue_style( 
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css', 
+        array(), 
+        '6.2.1'
+    );
 }
 add_action( 'wp_enqueue_scripts', 'usegreen_register_assets' );
 
@@ -58,6 +66,7 @@ function header_function() {
 }
 add_action( 'init', 'header_function' );
 
+// Footer widgets
 require_once('widgets/social.php');
 
 add_action('widgets_init', function () {

@@ -9,8 +9,8 @@ class Usegreen_Social_Widget extends WP_Widget {
         $this->fields = [
             'title' => __('Title', 'usegreen'),
             'credits' =>  __('Credits', 'usegreen'),
-            'twitter' => 'Twitter',
-            'facebook' => 'Facebook',
+            'youtube' => 'youtube',
+            'linkedin' => 'Linkedin',
             'instagram' => 'Instagram',
         ];
     }
