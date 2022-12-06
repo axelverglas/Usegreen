@@ -3,7 +3,6 @@
 <section class="section">
     <div class="container">
         <div class="error__container grid">
-            <!-- ajouter une image qui est stocké dans mon dossier assets dans mon thèmes -->
             <img src="<?= get_template_directory_uri() . '/assets/img/404.svg' ?>" alt="404" class="error__img">
             <div class="error__content">
                 <h1 class="section__title error__title">404</h1>
