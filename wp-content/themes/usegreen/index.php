@@ -13,7 +13,8 @@
             <?php single_post_title() ?>
         <?php endif ?>
     </h1>
-    <?php echo get_post("blog")->post_content; ?> 
+    <?php $blog_id = get_option( "page_for_posts" ); ?>
+    <?php echo get_post( $blog_id )->post_content; ?> 
     <?php get_search_form (); ?>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
