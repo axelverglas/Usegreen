@@ -732,6 +732,28 @@ textarea {
 	opacity: 1;
 }
 
+/*==================== AUTRES PAGES ====================*/
+.page h2 {
+	margin-bottom: var(--m-1);
+}
+
+.page p {
+	margin-bottom: var(--m-0-5);
+}
+
+.page p:last-child {
+	margin-bottom: 0;
+}
+
+.section.page a {
+	color: var(--text-color);
+	text-decoration: underline;
+}
+
+.page a:hover {
+	color: var(--first-color);
+}
+
 /*==================== RESPONSIVE ====================*/
 
 @media screen and (min-width: 768px) {
