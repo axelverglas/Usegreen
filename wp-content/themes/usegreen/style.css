@@ -287,12 +287,8 @@ img
 	align-items: center;
 }
 
-.advices__head .active{
-	display: block;
-}
-
 .advices__icon{
-	display: none;
+	color: var(--body-color);
 }
 
 .advices__description{

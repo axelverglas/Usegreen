@@ -62,11 +62,11 @@
                         <ul>
                         <?php while(have_rows('advices_list', 'option')): the_row() ?>
                             <li class="advices__card">
-                                    <div class="advices__head">
+                                <div class="advices__head">
                                         <h3 class="advices__title"><?php the_sub_field('title', 'option')?>
                                         </h3>
                                         <i class="fas fa-chevron-up"></i>
-                                    </div>
+        </div>
                                     <p class="advices__description"><?php the_sub_field('description', 'option')?></p>
                             </li>
                         <?php endwhile; ?>
