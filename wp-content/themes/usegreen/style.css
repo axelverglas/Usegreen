@@ -267,6 +267,14 @@ img {
 	cursor: pointer;
 }
 
+.advices__card:hover {
+	background-color: #3D3D3D;
+}
+
+.advices__card.active:hover {
+	background-color: #D3FEA8;
+}
+
 .advices__card.active {
 	background-color: var(--secondary-color);
 	cursor: default;
@@ -330,6 +338,10 @@ img {
 	font-size: var(--normal-font-size);
 	font-weight: var(--font-semi-bold);
 	color: var(--text-color);
+}
+
+.news__container a:hover {
+	color: #AAE59A;
 }
 
 .news__searchbar {
@@ -486,6 +498,10 @@ article:last-child .news__card {
 	margin-left: 50px !important;
 }
 
+#wpforms-128 .wpforms-submit-container .wpforms-submit:hover {
+	background-color: var(--first-color-alt) !important;
+}
+
 #wpforms-128-field_1-error {
 	position: absolute !important;
 	font-size: var(--normal-font-size);
@@ -514,6 +530,10 @@ textarea {
 	border-radius: 20px !important;
 	border: 0 !important;
 	outline: none !important;
+}
+
+.contact__form .wpforms-submit:hover {
+	background-color: var(--first-color-alt) !important;
 }
 
 .contact__form .wpforms-submit:hover {
@@ -647,7 +667,7 @@ textarea {
 	}
 
 	.home__section {
-		padding: 5rem 0 5.5rem;
+		padding: 6rem 0 3rem;
 	}
 
 	.home__content {
