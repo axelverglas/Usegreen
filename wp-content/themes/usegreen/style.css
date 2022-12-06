@@ -476,7 +476,9 @@ img {
 }
 
 #wpforms-128-field_1-error {
-	position: absolute !important
+	position: absolute !important;
+	font-size: var(--normal-font-size);
+	margin-top: var(--m-0-5);
 }
 
 /*==================== CONTACT ====================*/
