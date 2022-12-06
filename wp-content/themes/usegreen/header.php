@@ -23,7 +23,12 @@
       <?php
       wp_nav_menu([
         'theme_location' => 'header',
+        'menu_class' => 'nav__menu',
       ]);
       ?>
+      <div class="nav__toggle">
+        <i class="fa-solid fa-bars nav__open"></i>
+        <i class="fas fa-times nav__close"></i>
+      </div>
     </nav>
   </header>

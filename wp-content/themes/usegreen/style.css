@@ -149,15 +149,83 @@ img {
 	align-items: center;
 }
 
+.nav__logo {
+	z-index: 2;
+}
+
 .nav__logo img {
 	width: 125px;
 }
 
-.nav__button a {
-	color: var(--body-color);
-	font-weight: var(--font-medium);
+.nav__menu li a {
+	color: var(--text-color);
 }
 
+.nav__menu li a:hover {
+	color: var(--first-color);
+}
+
+.nav__menu .current-menu-item a {
+	color: var(--first-color) !important;
+}
+
+.nav__toggle {
+	font-size: 2rem;
+	color: var(--text-color);
+	cursor: pointer;
+	display: none;
+	z-index: 2;
+}
+
+.nav__toggle:hover {
+	color: var(--first-color);
+}
+
+.nav__toggle {
+	display: block;
+}
+
+.nav__toggle .nav__open {
+	display: block;
+}
+
+.nav__toggle .nav__close {
+	display: none;
+}
+
+.open .nav__toggle .nav__open {
+	display: none;
+}
+
+.open .nav__toggle .nav__close {
+	display: block;
+}
+
+@media screen and (max-width: 768px) {
+	.nav__menu {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--body-color);
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		transform: translateX(-100%);
+	}
+
+	.nav__menu li {
+		margin-bottom: var(--m-1);
+	}
+
+}
+
+.open .nav__menu {
+	transform: translateX(0);
+}
 
 /*==================== HOME ====================*/
 
@@ -401,6 +469,10 @@ article:last-child .news__card {
 	color: var(--text-color);
 }
 
+.news__title:hover {
+	color: #AAE59A;
+}
+
 .news__nopost {
 	text-align: center;
 }
@@ -412,6 +484,7 @@ article:last-child .news__card {
 
 .news .container h1 {
 	line-height: 1em;
+	cursor: default;
 }
 
 .news a {
@@ -662,6 +735,17 @@ textarea {
 /*==================== RESPONSIVE ====================*/
 
 @media screen and (min-width: 768px) {
+	.nav__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 270px;
+	}
+
+	.nav__toggle {
+		display: none;
+	}
+
 	.section {
 		padding: 3rem 0 3rem;
 	}

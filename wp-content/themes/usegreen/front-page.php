@@ -83,7 +83,7 @@
                                 <h3 class="advices__title">
                                     <?php the_sub_field('title', 'option') ?>
                                 </h3>
-                                <i class="fas fa-chevron-up"></i>
+                                <i class="fas fa-chevron-down"></i>
                             </div>
                             <p class="advices__description">
                                 <?php the_sub_field('description', 'option') ?>
