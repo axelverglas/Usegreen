@@ -578,6 +578,10 @@ img
 	color: var(--first-color);
 }
 
+.footer__social{
+	margin-top: var(--m-0-5);
+}
+
 .footer__social a {
 	margin-right: var(--m-0-5);
 }
@@ -593,6 +597,7 @@ img
 
 .footer__credits{
 	text-align: center;
+	margin-top: var(--m-0-5);
 }
 
 .scroll-to-top{

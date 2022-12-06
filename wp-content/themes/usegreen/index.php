@@ -1,5 +1,7 @@
 <?php get_header() ?>
 
+<?php if( have_posts() ) : ?>
+    <?php if ( is_home() && ! is_front_page() ) : ?>
 <section class="section">
     <div class="container">
     <h1 class="section__title">
@@ -11,6 +13,7 @@
             <?php single_post_title() ?>
         <?php endif ?>
     </h1>
+    <?php echo get_post("blog")->post_content; ?> 
     <?php get_search_form (); ?>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
@@ -23,5 +26,7 @@
         <?php endif; ?>
     </div>
 </section>
+<?php endif; ?>
+<?php endif; ?>
 
 <?php get_footer() ?>
