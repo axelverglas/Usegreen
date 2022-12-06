@@ -361,6 +361,10 @@ img {
 	margin-bottom: 20px;
 }
 
+article:last-child .news__card {
+	margin-bottom: 0px;
+}
+
 .news__img {
 	width: 100%;
 }
@@ -424,6 +428,9 @@ img {
 }
 
 /*==================== NEWSLETTER ====================*/
+.newsletter.section {
+	padding-bottom: 4rem;
+}
 
 .newsletter__box {
 	background: linear-gradient(to right, #AAE59A 5%, #F3F3E4 30%);
@@ -444,6 +451,10 @@ img {
 
 .newsletter__searchbar .wpforms-field-label {
 	display: none !important;
+}
+
+.newsletter__searchbar {
+	width: 100% !important;
 }
 
 .newsletter__searchbar input {
@@ -540,7 +551,6 @@ textarea {
 /*==================== FOOTER ====================*/
 
 .footer {
-	margin-top: var(--m-2);
 	border-top: 2px solid var(--text-color);
 }
 
@@ -724,6 +734,10 @@ textarea {
 		margin-left: 20px;
 	}
 
+	.newsletter.section {
+		padding-bottom: 6rem;
+	}
+
 	.newsletter__title {
 		font-size: 2.8rem;
 		text-align: center;
@@ -734,7 +748,6 @@ textarea {
 	}
 
 	.newsletter__searchbar {
-		width: 1060px !important;
 		margin-left: 205px !important;
 	}
 
@@ -744,7 +757,7 @@ textarea {
 
 	#wpforms-128 .wpforms-submit-container {
 		position: absolute !important;
-		right: 208px !important;
+		right: 220px !important;
 		bottom: 18px !important;
 	}
 

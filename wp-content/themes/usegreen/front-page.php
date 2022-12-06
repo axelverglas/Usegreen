@@ -124,7 +124,7 @@
     <?php if (have_rows('newsletter')):
         while (have_rows('newsletter')):
             the_row() ?>
-    <section class="section" id="newsletter">
+    <section class="newsletter section" id="newsletter">
         <div class="container">
             <div class="newsletter__box">
                 <h1 class="newsletter__title">
