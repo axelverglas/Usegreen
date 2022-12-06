@@ -460,7 +460,7 @@ img {
 #wpforms-128 .wpforms-submit-container .wpforms-submit {
 	position: absolute;
 	right: 8px !important;
-	bottom: 28px !important;
+	bottom: 45px !important;
 	background-color: var(--first-color) !important;
 	border: none !important;
 	border-radius: 20px !important;
@@ -468,7 +468,7 @@ img {
 }
 
 #wpforms-128-field_1-error {
-	position: absolute;
+	margin-top: var(--m-0-5);
 }
 
 /*==================== CONTACT ====================*/
