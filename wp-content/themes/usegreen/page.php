@@ -3,7 +3,7 @@
 <?php while (have_posts()):
     the_post(); ?>
 <main>
-    <section class="section page">
+    <section class="section other__page">
         <div class="container">
             <h1 class="section__title">
                 <?php the_title() ?>

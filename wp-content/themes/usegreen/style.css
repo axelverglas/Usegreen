@@ -166,7 +166,7 @@ img {
 }
 
 .nav__menu .current-menu-item a {
-	color: var(--first-color) !important;
+	color: var(--first-color);
 }
 
 .nav__toggle {
@@ -256,22 +256,6 @@ img {
 	margin-bottom: var(--m-2);
 }
 
-.home__button {
-	font-size: 21px;
-	display: flex;
-	color: var(--text-color);
-}
-
-.home__button span {
-	background-color: var(--first-color);
-	padding: 14px 18px 14px 18px;
-	border-radius: 20px;
-	margin-right: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .home__img {
 	width: 330px;
 	justify-self: center;
@@ -302,7 +286,7 @@ img {
 	margin-bottom: var(--m-1);
 	background-color: var(--secondary-color);
 	padding: 0px 30px 30px 30px;
-	clip-path: polygon(0 0%, 0 0, 90% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10%)
+	clip-path: polygon(0 0%, 0 0, 90% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10%);
 }
 
 .number__card:last-child {
@@ -736,24 +720,24 @@ textarea {
 }
 
 /*==================== AUTRES PAGES ====================*/
-.page h2 {
+.other__page h2 {
 	margin-bottom: var(--m-1);
 }
 
-.page p {
+.other__page p {
 	margin-bottom: var(--m-0-5);
 }
 
-.page p:last-child {
+.other__page p:last-child {
 	margin-bottom: 0;
 }
 
-.section.page a {
+.section.other__page a {
 	color: var(--text-color);
 	text-decoration: underline;
 }
 
-.page a:hover {
+.other__page a:hover {
 	color: var(--first-color);
 }
 
