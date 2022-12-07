@@ -221,6 +221,9 @@ img {
 		margin-bottom: var(--m-1);
 	}
 
+	.overflow {
+		overflow: hidden;
+	}
 }
 
 .open .nav__menu {
