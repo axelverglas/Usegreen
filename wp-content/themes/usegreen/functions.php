@@ -7,7 +7,7 @@ function usegreen_register_assets()
     if (is_page('accueil')) {
         wp_enqueue_script(
             'usegreen',
-            get_template_directory_uri() . '/assets/js/script.js',
+            get_template_directory_uri() . '/assets/js/home.js',
             array(),
         null,
         true
@@ -17,7 +17,7 @@ function usegreen_register_assets()
     //menu.js
     wp_enqueue_script(
         'usegreen-menu',
-        get_template_directory_uri() . '/assets/js/menu.js',
+        get_template_directory_uri() . '/assets/js/script.js',
         array(),
     null,
     true
